@@ -34,7 +34,7 @@ Stores it for reuse
 
 Visualises trends over time
 
-Action
+### Action
 
 Used Python to call the CoinGecko API
 
@@ -44,7 +44,7 @@ Stored processed data in a SQLite database
 
 Built a Streamlit dashboard to display prices and trends
 
-Result
+### Result
 
 Successfully built a working end-to-end pipeline
 
