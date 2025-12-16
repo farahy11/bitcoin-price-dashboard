@@ -104,8 +104,8 @@ Displays latest prices, trends, and summary statistics in Streamlit
 
 
 ## Repository Structure
+```text
 bitcoin-price-dashboard/
-│
 ├── pipeline_step1.py   # API data extraction
 ├── pipeline_step2.py   # Data transformation
 ├── pipeline_step3.py   # Load data into SQLite
@@ -113,8 +113,7 @@ bitcoin-price-dashboard/
 ├── crypto.db           # SQLite database
 ├── requirements.txt    # Dependencies
 └── README.md
-
-
+```
 
 ## How to Run the Project
 # Activate virtual environment
