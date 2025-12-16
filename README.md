@@ -2,11 +2,16 @@
 
 End-to-end data pipeline that extracts real-time Bitcoin price data from a public API, processes it using Python and Pandas, stores it in a local SQLite database, and visualises trends using a Streamlit dashboard.
 
-## Overview
+## Architecture Overview
 
-This project was inspired by seeing examples of real-world data pipelines used to collect, store, and analyse continuously changing data.
+This project follows a simple end-to-end data pipeline architecture:
 
-I wanted to build my own simplified version to understand how data flows end-to-end — from an external data source to storage and finally to visualisation.
+API → Data Processing → Storage → Visualisation
+
+- Data is extracted from a public cryptocurrency API
+- Processed and cleaned using Python and Pandas
+- Stored locally in a SQLite database
+- Visualised through an interactive Streamlit dashboard
 
 ### Project Goals
 
@@ -20,50 +25,40 @@ I wanted to build my own simplified version to understand how data flows end-to-
 
 ## Problem Statement
 
-Situation
-Public data sources like cryptocurrency APIs provide large volumes of raw data that are not immediately usable for analysis.
+### Situation
+Public cryptocurrency APIs provide large volumes of raw data that are not immediately usable for analysis.
 
-Task
+### Task
 Design and build a small data pipeline that:
-
-Collects live Bitcoin price data
-
-Cleans and structures the data
-
-Stores it for reuse
-
-Visualises trends over time
+- Collects live Bitcoin price data
+- Cleans and structures the data
+- Stores it for reuse
+- Visualises trends over time
 
 ### Action
-
-Used Python to call the CoinGecko API
-
-Transformed raw JSON data using Pandas
-
-Stored processed data in a SQLite database
-
-Built a Streamlit dashboard to display prices and trends
+- Used Python to call the CoinGecko API
+- Transformed raw JSON data using Pandas
+- Stored processed data in a SQLite database
+- Built a Streamlit dashboard to display prices and trends
 
 ### Result
+- Successfully built a working end-to-end pipeline
+- Stored 287+ historical price records, enabling trend analysis over time
+- Created a reusable dashboard for historical analysis
+- Improved understanding of real-world data engineering workflows
 
-Successfully built a working end-to-end pipeline
-
-Stored 287+ historical price records, enabling trend analysis over time
-
-Created a reusable dashboard for historical analysis
-
-Improved understanding of real-world data engineering workflows
 
 
 ## Architecture & Data Flow
-CoinGecko API
-     ↓
-Python (requests)
-     ↓
-Pandas (data cleaning & transformation)
-     ↓
-SQLite (persistent storage)
-     ↓
+
+CoinGecko API  
+↓  
+Python (requests)  
+↓  
+Pandas (data cleaning & transformation)  
+↓  
+SQLite (persistent storage)  
+↓  
 Streamlit (dashboard visualisation)
 
 
@@ -97,13 +92,16 @@ Reads data from SQLite
 Displays latest prices, trends, and summary statistics in Streamlit
 
 ## Technology Stack
-Category	Tools
-Language	Python
-Data Processing	Pandas
-API	CoinGecko (public API)
-Database	SQLite
-Visualisation	Streamlit
-Environment	Virtualenv
+
+| Category            | Tool                          |
+|---------------------|-------------------------------|
+| Language            | Python                        |
+| Data Processing     | Pandas                        |
+| API                 | CoinGecko (Public API)        |
+| Database            | SQLite                        |
+| Visualisation       | Streamlit                     |
+| Environment         | Virtualenv                    |
+
 
 ## Repository Structure
 bitcoin-price-dashboard/
@@ -146,4 +144,12 @@ Prevent duplicate timestamp inserts
 Move from SQLite to PostgreSQL
 
 Deploy Streamlit dashboard online
+
+## Why This Project?
+
+- Demonstrates understanding of end-to-end data pipelines
+- Uses real-world, continuously changing data
+- Focuses on core data engineering concepts without over-engineering
+- Designed to be simple, reproducible, and easy to explain
+
 
